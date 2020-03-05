@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MovieDetailsView View-->
+        <!--MovieDetails View-->
         <scene sceneID="IDx-lO-hJY">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailsViewView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4dR-W0-s9t" customClass="MovieDetailsViewView" customModule="SafeToNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4dR-W0-s9t" customClass="MovieDetailsView" customModule="SafeToNet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WYt-5X-GRX"/>
                         <viewControllerLayoutGuide type="bottom" id="KLE-Ff-ZNf"/>

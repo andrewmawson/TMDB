@@ -1,5 +1,5 @@
 //
-//  MovieListViewView.swift
+//  MovieListView.swift
 //  BankTest
 //
 //  Created by K10 on 05/03/2020.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MovieListViewView: UIViewController {
+class MovieListView: UIViewController {
     //MARK: - Variables
-    var presenter: MovieListViewPresenterProtocol?
+    var presenter: MovieListPresenterProtocol?
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -18,10 +18,10 @@ class MovieListViewView: UIViewController {
     }
 }
 
-extension MovieListViewView {
+extension MovieListView {
 	//MARK: - IBActions
 }
 
-extension MovieListViewView: MovieListViewViewProtocol {
+extension MovieListView: MovieListViewProtocol {
     
 }

@@ -1,5 +1,5 @@
 //
-//  MovieDetailsViewView.swift
+//  MovieDetailsView.swift
 //  BankTest
 //
 //  Created by K10 on 05/03/2020.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MovieDetailsViewView: UIViewController {
+class MovieDetailsView: UIViewController {
     //MARK: - Variables
-    var presenter: MovieDetailsViewPresenterProtocol?
+    var presenter: MovieDetailsPresenterProtocol?
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -18,10 +18,10 @@ class MovieDetailsViewView: UIViewController {
     }
 }
 
-extension MovieDetailsViewView {
+extension MovieDetailsView {
 	//MARK: - IBActions
 }
 
-extension MovieDetailsViewView: MovieDetailsViewViewProtocol {
+extension MovieDetailsView: MovieDetailsViewProtocol {
     
 }
