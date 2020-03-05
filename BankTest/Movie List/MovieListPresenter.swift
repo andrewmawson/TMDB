@@ -13,7 +13,7 @@ class MovieListPresenter: MovieListPresenterProtocol {
 
 extension MovieListPresenter: MovieListInteractorOutputProtocol {
 	func gotMovies(movies: [MovieViewModel]) {
-		 
+		view?.display(movies: movies)
 	}
 	
     

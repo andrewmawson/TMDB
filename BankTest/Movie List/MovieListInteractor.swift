@@ -8,8 +8,15 @@
 import Foundation
 
 class MovieListInteractor: MovieListInteractorInputProtocol {
+	private let APIService = MovieAPIService()
+	
 	func getLatestMovies() {
-		// TODO API Call and pass results to presenter
+		
+		APIService.getLatestMovies { movies in
+			if let movies = movies {
+				self.presenter?.gotMovies(movies: movies)
+			}
+		}		
 	}
 	
     weak var presenter: MovieListInteractorOutputProtocol?

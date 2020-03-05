@@ -15,6 +15,7 @@ class MovieListView: UITableViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		presenter?.interactor?.getLatestMovies()
     }
 }
 
@@ -24,7 +25,7 @@ extension MovieListView {
 
 extension MovieListView: MovieListViewProtocol {
 	func display(movies: [MovieViewModel]) {
+		
 	}
-	
     
 }

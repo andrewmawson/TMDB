@@ -28,6 +28,22 @@ Example key values in JSON response:
 
 */
 
+/*
+[
+    {
+        "name": {
+            "first_name": "Taylor",
+            "last_name": "Swift"
+        },
+        "age": 26
+    }
+]
+*/
+
+struct ResultsModel: Codable {
+    var results: [MovieViewModel]
+}
+
 struct MovieViewModel: Codable {
 	let id:Int
 	let original_title:String
