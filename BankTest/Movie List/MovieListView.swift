@@ -23,5 +23,8 @@ extension MovieListView {
 }
 
 extension MovieListView: MovieListViewProtocol {
+	func display(movies: [MovieViewModel]) {
+	}
+	
     
 }

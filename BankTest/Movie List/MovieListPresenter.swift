@@ -12,5 +12,9 @@ class MovieListPresenter: MovieListPresenterProtocol {
 }
 
 extension MovieListPresenter: MovieListInteractorOutputProtocol {
+	func gotMovies(movies: [MovieViewModel]) {
+		 
+	}
+	
     
 }

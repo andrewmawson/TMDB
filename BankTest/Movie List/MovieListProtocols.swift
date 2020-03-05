@@ -6,6 +6,7 @@
 //  Copyright (c) 2020 k10studios. All rights reserved.
 //
 import UIKit
+import Foundation
 
 protocol MovieListViewProtocol: class {
 	func display(movies:[MovieViewModel])
@@ -23,7 +24,7 @@ protocol MovieListInteractorInputProtocol: class {
 }
 
 protocol MovieListInteractorOutputProtocol: class {
-	func gotLatestMovies()
+	func gotMovies(movies:[MovieViewModel])
 }
 
 protocol MovieListWireframeProtocol: class {
