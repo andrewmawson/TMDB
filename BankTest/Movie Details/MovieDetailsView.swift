@@ -19,7 +19,7 @@ class MovieDetailsView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		assert(movie != nil, "Movie can not be nil")
-		movieTitleLabel.text = movie.original_title + "\n\n" + movie.overview
+		movieTitleLabel.text = movie.title + "\n\n" + movie.overview
 	}
 }
 

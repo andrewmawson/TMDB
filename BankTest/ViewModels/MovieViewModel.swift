@@ -46,7 +46,7 @@ struct ResultsModel: Codable {
 
 struct MovieViewModel: Codable {
 	let id:Int
-	let original_title:String
+	let title:String
 	let overview:String
 	let release_date:String
 }

@@ -18,17 +18,26 @@ class BankTestTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+	
+    func testGetLatestMoviesFromJsonSucceeds() {
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+		do {
+			if let data = try? fixtureWithName("GetLatestMovies") {
+				let resultModel = try JSONDecoder().decode(ResultsModel.self, from: data)
+				
+				let movies = resultModel.results
+				let firstMovie = resultModel.results[0]
+				
+				XCTAssertNotNil(resultModel)
+				XCTAssertEqual(movies.count, 20)
+				XCTAssertEqual(firstMovie.title, "A Rainy Day in New York")
+				   
+			}else{
+				XCTAssertTrue(false)
+			}
+		} catch {
+			XCTAssertTrue(false)
+		}
     }
 
 }
