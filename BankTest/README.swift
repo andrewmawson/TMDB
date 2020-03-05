@@ -38,6 +38,7 @@ Your request for an API key has been approved. You can start using this key imme
 API Key: 9c220d81a06bb0d860b74cdfa7223e98
 
 An example request looks like:
+https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2020-03-05&api_key=9c220d81a06bb0d860b74cdfa7223e98
 
 https://api.themoviedb.org/3/movie/550?api_key=9c220d81a06bb0d860b74cdfa7223e98
 We recently launched our TV API and would love some feedback if you have a chance to check it out.

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MovieListViewProtocol: class {
-    
+	func display(movies:[MovieViewModel])
 }
 
 protocol MovieListPresenterProtocol: class {
@@ -19,9 +19,11 @@ protocol MovieListPresenterProtocol: class {
 
 protocol MovieListInteractorInputProtocol: class {
     var presenter: MovieListInteractorOutputProtocol? { get set }
+	func getLatestMovies()
 }
 
 protocol MovieListInteractorOutputProtocol: class {
+	func gotLatestMovies()
 }
 
 protocol MovieListWireframeProtocol: class {
