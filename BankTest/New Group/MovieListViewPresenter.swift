@@ -1,0 +1,16 @@
+//
+//  MovieListViewPresenter.swift
+//  BankTest
+//
+//  Created by K10 on 05/03/2020.
+//  Copyright (c) 2020 k10studios. All rights reserved.
+
+class MovieListViewPresenter: MovieListViewPresenterProtocol {
+    weak var view: MovieListViewViewProtocol?
+	var interactor: MovieListViewInteractorInputProtocol?
+    var wireframe: MovieListViewWireframeProtocol?
+}
+
+extension MovieListViewPresenter: MovieListViewInteractorOutputProtocol {
+    
+}
