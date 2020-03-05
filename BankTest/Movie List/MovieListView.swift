@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieListView: UIViewController {
+class MovieListView: UITableViewController {
     //MARK: - Variables
     var presenter: MovieListPresenterProtocol?
     

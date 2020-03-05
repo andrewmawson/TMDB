@@ -157,6 +157,7 @@
 				01593CF3241120DA0049C51B /* LaunchScreen.storyboard */,
 				01593CF6241120DA0049C51B /* Info.plist */,
 				01593D18241121C60049C51B /* README.swift */,
+				01593D94241127ED0049C51B /* Movie API Service */,
 				01593D32241125380049C51B /* Movie List */,
 				01593D63241125910049C51B /* Movie Details */,
 			);
@@ -205,6 +206,13 @@
 				01593D81241127420049C51B /* MovieDetailsWireframe.swift */,
 			);
 			path = "Movie Details";
+			sourceTree = "<group>";
+		};
+		01593D94241127ED0049C51B /* Movie API Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Movie API Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

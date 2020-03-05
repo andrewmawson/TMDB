@@ -13,9 +13,8 @@ class RootViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		let movieList = MovieListWireframe.createMovieListModule()
-		show(movieList, sender: self)
+		navigationController?.setViewControllers([movieList], animated: false)
 	}
-
 
 }
 
