@@ -11,11 +11,16 @@ import UIKit
 class MovieDetailsView: UIViewController {
     //MARK: - Variables
     var presenter: MovieDetailsPresenterProtocol?
-    
-    //MARK: - LifeCycle
+	var movie:MovieViewModel!
+	
+	@IBOutlet weak var movieImageView: UIImageView!
+	@IBOutlet var movieTitleLabel: UILabel!
+	//MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+		assert(movie != nil, "Movie can not be nil")
+		movieTitleLabel.text = movie.original_title + "\n\n" + movie.overview
+	}
 }
 
 extension MovieDetailsView {

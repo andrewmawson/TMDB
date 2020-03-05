@@ -30,7 +30,10 @@ class MovieListView: UITableViewController {
 		return cell!
 	}
 	
-	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let movie = movies[indexPath.row]
+		presenter?.wireframe?.showMovieDetails(from: self, movie: movie)
+	}
 }
 
 extension MovieListView {

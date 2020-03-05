@@ -25,5 +25,5 @@ protocol MovieDetailsInteractorOutputProtocol: class {
 }
 
 protocol MovieDetailsWireframeProtocol: class {
-    static func createMovieDetailsModule() -> UIViewController
+    static func createMovieDetailsModule(movie:MovieViewModel) -> UIViewController
 }

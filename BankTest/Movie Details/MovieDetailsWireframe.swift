@@ -8,7 +8,7 @@
 import UIKit
 
 class MovieDetailsWireframe:  MovieDetailsWireframeProtocol {
-    static func createMovieDetailsModule() -> UIViewController {
+	static func createMovieDetailsModule(movie:MovieViewModel) -> UIViewController {
         guard let view = UIStoryboard(name: "MovieDetailsView", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsView") as? MovieDetailsView else {
             return UIViewController()
         }
@@ -17,6 +17,7 @@ class MovieDetailsWireframe:  MovieDetailsWireframeProtocol {
         let wireframe: MovieDetailsWireframeProtocol = MovieDetailsWireframe()
         
         view.presenter = presenter
+		view.movie = movie
         presenter.view = view
         presenter.interactor = interactor
         presenter.wireframe = wireframe

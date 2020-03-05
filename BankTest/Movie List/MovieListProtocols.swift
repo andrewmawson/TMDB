@@ -29,4 +29,5 @@ protocol MovieListInteractorOutputProtocol: class {
 
 protocol MovieListWireframeProtocol: class {
     static func createMovieListModule() -> UIViewController
+	func showMovieDetails(from view:MovieListViewProtocol, movie:MovieViewModel)
 }

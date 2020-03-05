@@ -24,5 +24,14 @@ class MovieListWireframe:  MovieListWireframeProtocol {
         
         return view
     }
+	
+	func showMovieDetails(from view:MovieListViewProtocol, movie:MovieViewModel) {
+		guard let view = view as? UIViewController else {
+			return
+		}
+		
+		let details = MovieDetailsWireframe.createMovieDetailsModule(movie: movie)
+		view.show(details, sender: self)
+	}
     
 }
