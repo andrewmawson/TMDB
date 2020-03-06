@@ -61,6 +61,8 @@
 		01E6DC3424112E4600D643C8 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6DC3324112E4600D643C8 /* MovieViewModel.swift */; };
 		01E6DC362411312E00D643C8 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6DC3324112E4600D643C8 /* MovieViewModel.swift */; };
 		01E6DC372411312F00D643C8 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6DC3324112E4600D643C8 /* MovieViewModel.swift */; };
+		01FAF154241290F2009ECD24 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2FA392412840C00B99D2A /* MovieDetailsViewModel.swift */; };
+		01FAF155241290F3009ECD24 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2FA392412840C00B99D2A /* MovieDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,6 +411,7 @@
 				01593D6E2411272C0049C51B /* MovieListPresenter.swift in Sources */,
 				01593D00241120DB0049C51B /* BankTestTests.swift in Sources */,
 				017CD890241159990053DAF4 /* TestingUtils.swift in Sources */,
+				01FAF154241290F2009ECD24 /* MovieDetailsViewModel.swift in Sources */,
 				01593D8F241127420049C51B /* MovieDetailsView.swift in Sources */,
 				01593D712411272C0049C51B /* MovieListProtocols.swift in Sources */,
 				010305DC24115E5B00141308 /* MovieAPIService.swift in Sources */,
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FAF155241290F3009ECD24 /* MovieDetailsViewModel.swift in Sources */,
 				01593D752411272C0049C51B /* MovieListInteractor.swift in Sources */,
 				01593D8A241127420049C51B /* MovieDetailsProtocols.swift in Sources */,
 				01593D6F2411272C0049C51B /* MovieListPresenter.swift in Sources */,

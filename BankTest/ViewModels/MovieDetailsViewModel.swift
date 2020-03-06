@@ -19,7 +19,7 @@ struct MovieDetailsViewModel: Codable {
 	let overview:String
 	let release_date:String
 	let runtime:Int
-	let vote_average:Int
+	let vote_average:Double
 	let backdrop_path:String?
 	let genres:[GenreViewModel]?
 	
