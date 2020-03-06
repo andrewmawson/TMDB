@@ -8,6 +8,17 @@
 
 import Foundation
 
+struct ResultsModel: Codable {
+    var results: [MovieViewModel]
+}
+
+struct MovieViewModel: Codable {
+	let id:Int
+	let title:String
+	let overview:String
+	let release_date:String
+}
+
 /*
 Example key values in JSON response:
 
@@ -27,26 +38,3 @@ Example key values in JSON response:
 "release_date": "2019-07-26"
 
 */
-
-/*
-[
-    {
-        "name": {
-            "first_name": "Taylor",
-            "last_name": "Swift"
-        },
-        "age": 26
-    }
-]
-*/
-
-struct ResultsModel: Codable {
-    var results: [MovieViewModel]
-}
-
-struct MovieViewModel: Codable {
-	let id:Int
-	let title:String
-	let overview:String
-	let release_date:String
-}

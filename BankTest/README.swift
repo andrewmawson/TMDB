@@ -8,6 +8,7 @@ Overview notes and improvements:
 5) The API uses a date range of the last seven days. This could be improved by allowing
 6) The movies are not sorted by date, displaying the latest at the top would be better
 7) Only 20 movies are shown, adding paging automatically loading when the user scrolls to the bottom of the table view would give a better UX.
+8) Some JSON responses for Movie details contain Null values, this causes the Codeable protocol to fail to create the ViewModel. This can be remedied with optionals (e.g. backdrop_path or genres in MovieDetailsViewModel )
 
 
 

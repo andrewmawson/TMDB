@@ -12,7 +12,7 @@ class MovieDetailsView: UIViewController {
     //MARK: - Variables
     var presenter: MovieDetailsPresenterProtocol?
 	var movie:MovieViewModel!
-	
+	var movieDetails:MovieDetailsViewModel? = nil
 	@IBOutlet weak var movieImageView: UIImageView!
 	@IBOutlet var movieTitleLabel: UILabel!
 	//MARK: - LifeCycle
@@ -29,5 +29,12 @@ extension MovieDetailsView {
 }
 
 extension MovieDetailsView: MovieDetailsViewProtocol {
+	func display(movieDetails: MovieDetailsViewModel) {
+		self.movieDetails = movieDetails
+		DispatchQueue.main.async {
+			self.movieTitleLabel.text =  movieDetails.prettyPrinted
+		}
+	}
+	
     
 }

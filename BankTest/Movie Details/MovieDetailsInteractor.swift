@@ -10,9 +10,10 @@ class MovieDetailsInteractor: MovieDetailsInteractorInputProtocol {
 	private let APIService = MovieAPIService()
 	
 	func getAdditionalMovieInfo(movie:MovieViewModel) {
-		APIService.getAdditionalMovieInfo(completionBlock: { (movieInfo) in
-			//TODO
-			
+		APIService.getAdditionalMovieInfo(completionBlock: { (movieDetails) in
+			if let movieDetails = movieDetails {
+				self.presenter?.gotMovieDetails(movies: movieDetails)
+			}
 		}, movieId: movie.id)
 	}
 	

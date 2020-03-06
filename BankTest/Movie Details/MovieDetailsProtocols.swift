@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MovieDetailsViewProtocol: class {
-    
+	func display(movieDetails:MovieDetailsViewModel)
 }
 
 protocol MovieDetailsPresenterProtocol: class {
@@ -23,6 +23,7 @@ protocol MovieDetailsInteractorInputProtocol: class {
 }
 
 protocol MovieDetailsInteractorOutputProtocol: class {
+	func gotMovieDetails(movies:MovieDetailsViewModel)
 }
 
 protocol MovieDetailsWireframeProtocol: class {

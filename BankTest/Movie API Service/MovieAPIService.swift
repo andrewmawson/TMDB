@@ -44,7 +44,7 @@ class MovieAPIService: NSObject {
 		}
 	}
 	
-	func getAdditionalMovieInfo(completionBlock:@escaping( (MovieViewModel?) -> () ), movieId:Int){
+	func getAdditionalMovieInfo(completionBlock:@escaping( (MovieDetailsViewModel?) -> () ), movieId:Int){
 		let path = "movie/\(movieId)"
 		
 		if let url = URL(string: baseURL + path + "?" + apiKey) {
@@ -53,9 +53,8 @@ class MovieAPIService: NSObject {
 				let decoder = JSONDecoder()
 				do {
 					if let data = data {
-						//print("https://api.themoviedb.org/3/movie/550?api_key=9c220d81a06bb0d860b74cdfa7223e98")
-						let decoded = try decoder.decode(ResultsModel.self, from: data)
-						completionBlock(decoded.results.first)
+						let decoded = try decoder.decode(MovieDetailsViewModel.self, from: data)
+						completionBlock(decoded)
 					}else{
 						completionBlock(nil)
 					}

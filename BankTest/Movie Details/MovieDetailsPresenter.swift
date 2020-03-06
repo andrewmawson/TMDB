@@ -12,5 +12,9 @@ class MovieDetailsPresenter: MovieDetailsPresenterProtocol {
 }
 
 extension MovieDetailsPresenter: MovieDetailsInteractorOutputProtocol {
+	func gotMovieDetails(movies: MovieDetailsViewModel) {
+		view?.display(movieDetails: movies)
+	}
+	
     
 }
