@@ -19,6 +19,7 @@ protocol MovieDetailsPresenterProtocol: class {
 
 protocol MovieDetailsInteractorInputProtocol: class {
     var presenter: MovieDetailsInteractorOutputProtocol? { get set }
+	func getAdditionalMovieInfo(movie:MovieViewModel)
 }
 
 protocol MovieDetailsInteractorOutputProtocol: class {

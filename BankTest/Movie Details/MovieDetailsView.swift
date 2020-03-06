@@ -20,6 +20,7 @@ class MovieDetailsView: UIViewController {
         super.viewDidLoad()
 		assert(movie != nil, "Movie can not be nil")
 		movieTitleLabel.text = movie.title + "\n\n" + movie.overview
+		presenter?.interactor?.getAdditionalMovieInfo(movie: movie)
 	}
 }
 

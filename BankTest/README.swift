@@ -32,6 +32,7 @@ Code Challenge
 Please create a mobile app that interacts with the movie DB API based on the following user stories:
 
 As a User I want to see the latest movies so that I can get some idea on the latest movies to watch (please use the /movie/latest API for this purpose).
+https://api.themoviedb.org/3/movie/latest?api_key=9c220d81a06bb0d860b74cdfa7223e98
 
 As a User I want to be able to click on a specific movie in the "latest movies" so that I can see additional information about that movie (please use the endpoint /movie/{movie_id}).
 

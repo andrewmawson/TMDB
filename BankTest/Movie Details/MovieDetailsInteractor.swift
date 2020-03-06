@@ -7,5 +7,14 @@
 //
 
 class MovieDetailsInteractor: MovieDetailsInteractorInputProtocol {
+	private let APIService = MovieAPIService()
+	
+	func getAdditionalMovieInfo(movie:MovieViewModel) {
+		APIService.getAdditionalMovieInfo(completionBlock: { (movieInfo) in
+			//TODO
+			
+		}, movieId: movie.id)
+	}
+	
     weak var presenter: MovieDetailsInteractorOutputProtocol?
 }

@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class MovieAPIService: NSObject {
 	private let baseURL = "https://api.themoviedb.org/3/"
-	private let apiKey = "&api_key=9c220d81a06bb0d860b74cdfa7223e98"
+	private let apiKey = "api_key=9c220d81a06bb0d860b74cdfa7223e98"
 	private let session = URLSession.shared
 	
 	func getLatestMovies(completionBlock:@escaping( ([MovieViewModel]?) -> () )){
@@ -22,7 +23,7 @@ class MovieAPIService: NSObject {
 		
 		let path = "discover/movie?primary_release_date.gte=\(oneWeekAgo)&primary_release_date.lte=\(today)"
 		
-		if let url = URL(string: baseURL + path + apiKey) {
+		if let url = URL(string: baseURL + path + "&" + apiKey) {
 			
 			let task = session.dataTask(with: url, completionHandler: { data, response, error in
 				let decoder = JSONDecoder()
@@ -36,7 +37,6 @@ class MovieAPIService: NSObject {
 
 				} catch {
 					completionBlock(nil)
-					print("Failed to decode JSON")
 				}
 			})
 			
@@ -44,35 +44,34 @@ class MovieAPIService: NSObject {
 		}
 	}
 	
-	func getMovieImage(completionBlock:@escaping( ([MovieViewModel]?) -> () )){
-		let formatter = DateFormatter()
-		formatter.dateFormat = "yyyy-MM-dd"
+	func getAdditionalMovieInfo(completionBlock:@escaping( (MovieViewModel?) -> () ), movieId:Int){
+		let path = "movie/\(movieId)"
 		
-		let today = formatter.string(from: Date())
-		let oneWeekAgo = formatter.string(from: Date(timeInterval: -(60*60*24*7), since: Date()))
-		
-		let path = "discover/movie?primary_release_date.gte=\(oneWeekAgo)&primary_release_date.lte=\(today)"
-		
-		if let url = URL(string: baseURL + path + apiKey) {
+		if let url = URL(string: baseURL + path + "?" + apiKey) {
 			
 			let task = session.dataTask(with: url, completionHandler: { data, response, error in
 				let decoder = JSONDecoder()
 				do {
 					if let data = data {
+						//print("https://api.themoviedb.org/3/movie/550?api_key=9c220d81a06bb0d860b74cdfa7223e98")
 						let decoded = try decoder.decode(ResultsModel.self, from: data)
-						completionBlock(decoded.results)
+						completionBlock(decoded.results.first)
 					}else{
 						completionBlock(nil)
 					}
 
 				} catch {
 					completionBlock(nil)
-					print("Failed to decode JSON")
 				}
 			})
 			
 			task.resume()
 		}
+	}
+	
+	func getMovieImage(imageId:String) -> UIImage {
+		// TODO: Download and return image
+		return UIImage()
 	}
 
 }
