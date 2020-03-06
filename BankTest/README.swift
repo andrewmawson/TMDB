@@ -1,18 +1,27 @@
 /*
-
+Andrew Mawson
 Overview notes and improvements:
-1) No 3rd Party libs are used, I try to avoid using cocoapods or Carthage. Perhaps with the expection of AFNetworking or Alomofire.
-2) I've used VIP / Clean Swift templates for the two view, MovieList & MovieDetails. I have a script for creating these 6 files.
-3) The API call is made using a simple no frills URLSession, I did this because of time constaints and there is only one API call, so kept it simple.
-4) The suggested API end point "/movie/latest" appears to be obsolete. I used the discover endpoint.
-5) The API uses a date range of the last seven days. This could be improved by allowing
-6) The movies are not sorted by date, displaying the latest at the top would be better
-7) Only 20 movies are shown, adding paging automatically loading when the user scrolls to the bottom of the table view would give a better UX.
+1) No 3rd Party libs are used, I try to avoid using them. Perhaps with the expection of using well supported libs like AFNetworking or Alomofire.
+2) I've used VIP / Clean Swift templates for the two views, MovieList & MovieDetails. I have a script for creating these 6 files and boilerplate code.
+3) The API call is made using a simple no frills URLSession, I did this because of time constaints and to keep it simple.
+4) The suggested API end point "/movie/latest" appears to be obsolete and was returning just one item. So, I used the discover endpoint.
+5) The API uses a date range of the last seven days. This could be changed to an enum to allow fixed choices, for example 1 day, 1 week, 1 month, 1 year.
+6) The movies are not sorted, displaying the latest at the top would be better
+7) Only 20 movies are shown, adding paging to automatically load the next 20 when the user scrolls to the bottom of the table view would give a better UX.
 8) Some JSON responses for Movie details contain Null values, this causes the Codeable protocol to fail to create the ViewModel. This can be remedied with optionals (e.g. backdrop_path or genres in MovieDetailsViewModel )
+9) Add more JSON with null values to the test cases.
+10) It would be nice to download movie images or show thumbnails. Although there are atleast two choice poster or backdrop. These could be downloaded and cached.
+11) The UI is basic :)
+12) There is no error handling for network calls.
+13) No UI tests, time ran out.
+*/
 
 
 
 
+
+/*
+Test Instructions:
 
 Code quality: is the code simple, easy to understand, and maintainable? Does object-oriented code follow principles such as the single responsibility principle? Is the coding style consistent with the language's guidelines? Is it consistent throughout the codebase?
 
@@ -45,7 +54,12 @@ Can be built and deployed on an emulator/simulator/device running the latest And
 Movie DB API
 https://www.themoviedb.org/documentation/api
 https://developers.themoviedb.org/3/getting-started/search-and-query-for-details
+*/
 
+
+
+/*
+API signup confirmation:
 Hi kryten42,
 
 Your request for an API key has been approved. You can start using this key immediately.
