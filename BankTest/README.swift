@@ -1,7 +1,7 @@
 /*
 Andrew Mawson
 Overview notes and improvements:
-1) No 3rd Party libs are used, I try to avoid using them. Perhaps with the expection of using well supported libs like AFNetworking or Alomofire.
+1) No 3rd Party libs are used, I try to avoid using them. Perhaps with the exception of using well supported libs like AFNetworking or Alomofire.
 2) I've used VIP / Clean Swift templates for the two views, MovieList & MovieDetails. I have a script for creating these 6 files and boilerplate code.
 3) The API call is made using a simple no frills URLSession, I did this because of time constaints and to keep it simple.
 4) The suggested API end point "/movie/latest" appears to be obsolete and was returning just one item. So, I used the discover endpoint.
@@ -9,11 +9,12 @@ Overview notes and improvements:
 6) The movies are not sorted, displaying the latest at the top would be better
 7) Only 20 movies are shown, adding paging to automatically load the next 20 when the user scrolls to the bottom of the table view would give a better UX.
 8) Some JSON responses for Movie details contain Null values, this causes the Codeable protocol to fail to create the ViewModel. This can be remedied with optionals (e.g. backdrop_path or genres in MovieDetailsViewModel )
-9) Add more JSON with null values to the test cases.
+9) Add more JSON with null values to the test cases, make the two existing JSON unit test more detailed and check more values are correct.
 10) It would be nice to download movie images or show thumbnails. Although there are atleast two choice poster or backdrop. These could be downloaded and cached.
 11) The UI is basic :)
 12) There is no error handling for network calls.
 13) No UI tests, time ran out.
+
 */
 
 
