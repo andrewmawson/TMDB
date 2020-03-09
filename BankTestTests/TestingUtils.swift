@@ -47,16 +47,4 @@ func fixtureWithName(_ name: String, ofType: String = "json") throws -> Data {
     }
 
 	return data
-//    do {
-//        try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//    } catch (let value) {
-//        print(value)
-//    }
-//
-//    guard let JSON = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else {
-//        print(FixtureError.cannotParseData)
-//        throw FixtureError.cannotParseData
-//    }
-//
-//    return JSON as AnyObject
 }
