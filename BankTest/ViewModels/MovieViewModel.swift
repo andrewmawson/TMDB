@@ -17,4 +17,14 @@ struct MovieViewModel: Codable {
 	let title:String
 	let overview:String
 	let release_date:String
+	
+	var listDisplayText:String {
+		return title + " (\(release_date))"
+	}
+	
+	var detailDisplayText:String {
+		return title + "\n\n" + overview
+	}
+	
+	
 }

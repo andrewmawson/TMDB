@@ -26,7 +26,7 @@ class MovieListView: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell")
 		let movie = movies[indexPath.row]
-		cell?.textLabel?.text = movie.title + "(" + movie.release_date + ")"
+		cell?.textLabel?.text = movie.listDisplayText
 		return cell!
 	}
 	

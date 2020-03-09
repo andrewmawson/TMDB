@@ -23,12 +23,12 @@ struct MovieDetailsViewModel: Codable {
 	let backdrop_path:String?
 	let genres:[GenreViewModel]?
 	
-	var prettyPrinted:String {
+	var displayText:String {
 		let newLine = "\n\n"
-		return title + newLine + overview + newLine + "Vote: \(vote_average)" + newLine + "RunTime: \(runtime) mins" + newLine + genresPrettyPrinted
+		return title + newLine + overview + newLine + "Vote: \(vote_average)" + newLine + "RunTime: \(runtime) mins" + newLine + genresDisplayText
 	}
 	
-	private var genresPrettyPrinted:String {
+	private var genresDisplayText:String {
 		var genreText = "Genres: "
 		if let gernes = genres {
 			for genre in gernes {

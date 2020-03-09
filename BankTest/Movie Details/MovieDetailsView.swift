@@ -19,7 +19,7 @@ class MovieDetailsView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		assert(movie != nil, "Movie can not be nil")
-		movieTitleLabel.text = movie.title + "\n\n" + movie.overview
+		movieTitleLabel.text = movie.detailDisplayText
 		presenter?.interactor?.getAdditionalMovieInfo(movie: movie)
 	}
 }
@@ -32,7 +32,7 @@ extension MovieDetailsView: MovieDetailsViewProtocol {
 	func display(movieDetails: MovieDetailsViewModel) {
 		self.movieDetails = movieDetails
 		DispatchQueue.main.async {
-			self.movieTitleLabel.text =  movieDetails.prettyPrinted
+			self.movieTitleLabel.text =  movieDetails.displayText
 		}
 	}
 	
